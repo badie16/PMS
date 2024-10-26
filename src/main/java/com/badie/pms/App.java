@@ -1,5 +1,8 @@
 package com.badie.pms;
 
+import com.badie.pms.controller.AdminLogin;
+import com.badie.pms.db.MyConnection;
+import com.badie.pms.util.Directories;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -12,11 +15,10 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
     @Override
-    public void start(Stage primaryStage)  {
-
-        primaryStage.setScene(new Scene(new Group()));
-        primaryStage.show();
+    public void start(Stage primaryStage) throws IOException {
+        if (MyConnection.connection() != null) {
+            new AdminLogin().showView(primaryStage);
+        }
     }
 }
