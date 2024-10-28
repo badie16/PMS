@@ -1,3 +1,60 @@
+
+.bgV1{
+    -fx-background-color : #212529 ;
+}
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#ffffff80;
+    -fx-font-size:18px;
+    -fx-line-height: 1.5;
+    -fx-alignment:CENTER-LEFT;
+    -fx-padding: 0 0 0 15;
+}
+
+.nav-btn:hover,
+.nav-btn.active{
+    -fx-fill:#FFF;
+    -fx-text-fill:#FFF;
+}
+
+.card-header {
+    -fx-background-color: #00000008;
+    -fx-border-color:#00000020;
+    -fx-border-width:1;
+    -fx-border-radius:5 5 0 0
+}
+.card-body {
+    -fx-border-color:#00000020;
+    -fx-border-width:0 1 1 1;
+
+}
+.badge{
+    -fx-font-size: 15;
+    -fx-padding : 2 10 2 10 ;
+    -fx-background-radius : 5;
+}
+.badge .label{
+    -fx-text-fill:#fff;
+}
+.bg-success {
+    -fx-background-color: #198754;
+}
+.bg-primary{
+ -fx-background-color: #0d6efd;
+}
+.radio-box{
+    -fx-background-color:#fff;
+    -fx-border-color:#ccc;
+    -fx-border-width:1;
+    -fx-padding: 0 4 0 4;
+    -fx-font-size : 13
+}
+
+
+/*
+
+*/
 .top-form{
     -fx-background-color:#fff;
     -fx-border-color:#000;
@@ -26,7 +83,7 @@
     -fx-background-color: linear-gradient(to bottom right, #0099ff 0%, #9900ff 100%);
 }
 .full-back{
-    -fx-background-image: url(../img/background.jpg);
+    -fx-background-image: url(../imgs/parkA.png);
     -fx-background-size: cover;
 }
 .input-V1{
@@ -68,14 +125,7 @@
     -fx-text-fill:#49ae0e;
     -fx-fill: #49ae0e;
 }
-.nav-btn{
-    -fx-background-color:transparent;
-    -fx-cursor:hand;
-    -fx-text-fill:#878787;
-    -fx-font-size:18px;
-    -fx-line-height: 1;
-    -fx-alignment:CENTER-LEFT;
-}
+
 .sub-nav-btn{
     -fx-background-color:transparent;
     -fx-cursor:hand;

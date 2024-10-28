@@ -37,16 +37,18 @@ public class UserDb {
         }
         return false;
     }
-    Boolean exitUserEmail(String user_email){
-        sql = "SELECT * FROM users WHERE user_email = ?";
+    public int getIdUserByEmail(String user_email){
+        sql = "SELECT user_id FROM users WHERE user_email = ?";
         try {
             ps=con.prepareStatement(sql);
             ps.setString(1, user_email);
-            return ps.executeQuery().next();
+            ResultSet rs = ps.executeQuery();
+            if (rs.next())
+                 return rs.getInt("user_id");
         } catch (SQLException e) {
             System.out.println("error " + e);
         }
-        return false;
+        return -1;
     }
     public User getUser(int user_id){
         if (!exitUser(user_id)) return null; //chick is user exited before start function getUser
@@ -89,24 +91,21 @@ public class UserDb {
 //        }
 //        return user.id;
 //    }
-//    public void updateUser(User user) {
-//        String sql = "UPDATE users " +
-//                "SET password = ?, firstName = ?, lastName = ?, email = ?, mobileNumber = ?, gender = ? " +
-//                "WHERE id = ?";
-//        try {
-//            ps = con.prepareStatement(sql);
-//            ps.setString(1, user.pass);
-//            ps.setString(2, user.firstName);
-//            ps.setString(3, user.lastName);
-//            ps.setString(4, user.email);
-//            ps.setString(5, user.mobileNumber);
-//            ps.setString(6, user.gender.toString());
-//            ps.setInt(7, user.id);  // Assuming 'id' is the primary key
-//            ps.executeUpdate();
-//        } catch (SQLException e) {
-//            System.out.println("Error: " + e.getMessage());
-//        }
-//    }
+    public void updateUser(User user) {
+        String sql = "UPDATE users " +
+                "SET user_pass = ?, user_email = ? " +
+                "WHERE user_id = ?";
+        try {
+            System.out.println(user.user_id);
+            ps = con.prepareStatement(sql);
+            ps.setString(1, user.user_pass);
+            ps.setString(2, user.user_email);
+            ps.setInt(3, user.user_id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 //    public void removeUser(int id){
 //
 //        sql = "DELETE FROM users WHERE id = '"

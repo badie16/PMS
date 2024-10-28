@@ -1,17 +1,22 @@
 package com.badie.pms.controller;
 
 import com.badie.pms.db.UserDb;
+import com.badie.pms.model.User;
 import com.badie.pms.util.Directories;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.IOException;
-public class AdminLogin {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AdminLogin implements Initializable {
     @FXML
     TextField email;
     @FXML
@@ -24,17 +29,34 @@ public class AdminLogin {
         stage.setScene(new Scene(root));
         stage.setTitle("Login");
         stage.show();
+
     }
-    public void onClickBtnAdmin(ActionEvent actionEvent) {
+    public void onClickBtnAdmin(ActionEvent e) {
         if (pass.getText().isEmpty() || email.getText().isEmpty()) {
             Directories.alert("email or PassWord is empty ", Alert.AlertType.ERROR);
         }else {
             UserDb usDb = new UserDb();
-            System.out.println(usDb.exitUser(email.getText(), pass.getText()));
+            if(usDb.exitUser(email.getText(), pass.getText())){
+                AdminDashboard dashboard = new AdminDashboard();
+                Stage stage = Directories.stageFromEvent(e);
+                try {
+                    stage.hide();
+                    dashboard.setAdmin(usDb.getUser(usDb.getIdUserByEmail(email.getText())));
+                    dashboard.showView(stage);
+                }catch (IOException ex){
+                    System.out.println(ex);
+                }
+            }
         }
     }
     public void OnForgotPass(MouseEvent mouseEvent) {
         Directories.alert("Take a deep breath and relax, 😊" +
                 " and you will remember the password 😏", Alert.AlertType.WARNING);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        email.setText("admin@gmail.com");
+        pass.setText("admin");
     }
 }

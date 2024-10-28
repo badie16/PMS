@@ -1,5 +1,6 @@
 package com.badie.pms;
 
+import com.badie.pms.controller.AdminDashboard;
 import com.badie.pms.controller.AdminLogin;
 import com.badie.pms.db.MyConnection;
 import com.badie.pms.util.Directories;
@@ -16,9 +17,9 @@ public class App extends Application {
         launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage stage) throws IOException {
         if (MyConnection.connection() != null) {
-            new AdminLogin().showView(primaryStage);
+            new AdminLogin().showView(stage);
         }
     }
 }
