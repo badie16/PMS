@@ -41,11 +41,13 @@ public class AdminLogin implements Initializable {
                 Stage stage = Directories.stageFromEvent(e);
                 try {
                     stage.hide();
-                    dashboard.setAdmin(usDb.getUser(usDb.getIdUserByEmail(email.getText())));
+                    AdminDashboard.adminId = usDb.getIdUserByEmail(email.getText());
                     dashboard.showView(stage);
                 }catch (IOException ex){
                     System.out.println(ex);
                 }
+            }else {
+                Directories.alert("Email or PassWord is incorrect ", Alert.AlertType.WARNING);
             }
         }
     }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -56,18 +58,27 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="emailInput" editable="false" focusTraversable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="276.0" style="-fx-border-radius: 2;" styleClass="input-V1" text="admin@gmail.com" />
+                        <TextField fx:id="emailInput" editable="false" focusTraversable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="276.0" style="-fx-border-radius: 2;" styleClass="input-V1" />
                      </children>
                   </VBox>
                   <Button mnemonicParsing="false" onAction="#updateStudent" prefHeight="26.0" prefWidth="66.0" style="-fx-text-fill: #fff;" styleClass="bg-primary" text="Save" GridPane.rowIndex="2" />
-                  <VBox layoutX="21.0" layoutY="20.0" spacing="8.0" GridPane.rowIndex="1">
+                  <VBox layoutX="21.0" layoutY="20.0" maxWidth="1.7976931348623157E308" spacing="8.0" GridPane.rowIndex="1">
                      <children>
                         <Label text="Password">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <PasswordField fx:id="passInput" focusTraversable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" style="-fx-border-radius: 2;" styleClass="input-V1" text="admin" />
+                        <Group nodeOrientation="LEFT_TO_RIGHT">
+                           <children>
+                              <PasswordField fx:id="passInput" focusTraversable="false" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" prefWidth="328.0" style="-fx-border-radius: 2;" styleClass="input-V1" />
+                              <FontAwesomeIcon glyphName="EYE" layoutX="296.0" layoutY="26.0" size="1.5em" tabSize="0" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                           </children>
+                        </Group>
                      </children>
                   </VBox>
                </children>

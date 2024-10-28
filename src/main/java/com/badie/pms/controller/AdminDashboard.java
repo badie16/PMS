@@ -1,5 +1,6 @@
 package com.badie.pms.controller;
 
+import com.badie.pms.db.UserDb;
 import com.badie.pms.model.User;
 import com.badie.pms.util.Directories;
 import javafx.event.ActionEvent;
@@ -18,13 +19,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminDashboard implements Initializable {
+    public static int adminId;
     public AnchorPane menu;
     public Button btnProfilePage;
     public BorderPane mainAppContainer;
     public AnchorPane dashboardView;
     public static AnchorPane dashboardViewStatic;
     private User admin;
-
     public AdminDashboard(){
 
     }
@@ -39,18 +40,21 @@ public class AdminDashboard implements Initializable {
     }
     public void onClickMenuNav(ActionEvent event) throws IOException {
         if (event.getSource().equals(btnProfilePage)) {
-            new AdminProfile().setAdmin(admin);
-            mainAppContainer.setCenter(FXMLLoader.load(Directories.urlOfRsr(Directories.adminProfileView)));
+            FXMLLoader fx = new FXMLLoader(Directories.urlOfRsr(Directories.adminProfileView));
+            Parent root = fx.load();
+            AdminProfile controller = fx.getController();
+            controller.setAdmin(admin);
+            mainAppContainer.setCenter(root);
         }
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dashboardViewStatic = dashboardView;
+        UserDb usDb = new UserDb();
+        this.setAdmin(usDb.getUser(adminId));
+
     }
 
-    public User getAdmin() {
-        return admin;
-    }
     public void setAdmin(User admin) {
         this.admin = admin;
     }

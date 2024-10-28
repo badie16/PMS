@@ -19,24 +19,19 @@ public class AdminProfile {
     public TextField emailInput;
     public PasswordField passInput;
     private User admin = new User();
-    public void onClickMenuNav(MouseEvent mouseEvent) throws IOException {
+    public void onClickMenuNav(MouseEvent mouseEvent)  {
         ((BorderPane)(mainContainer.getParent())).setCenter(AdminDashboard.dashboardViewStatic);
     }
-
     private boolean isInfoInputEmpty() {
         return passInput.getText().isEmpty() || emailInput.getText().isEmpty();
     }
-
     public User getAdmin() {
         return admin;
     }
-
     public void setAdmin(User admin) {
         this.admin = admin;
     }
-
     /* start admin info edit */
-
     public void updateStudent(){
         if (isInfoInputEmpty() ){
             Directories.alert("Please fill all blank fields",
@@ -45,7 +40,7 @@ public class AdminProfile {
             boolean choix = Directories.alert("Update Student ?", Alert.AlertType.CONFIRMATION);
             if (choix) {
                 admin.user_email = emailInput.getText();
-                admin.user_pass = emailInput.getText();
+                admin.user_pass = passInput.getText();
                 UserDb usDb = new UserDb();
                 usDb.updateUser(admin);
                 Directories.alert("Student has successfully update",
@@ -53,5 +48,15 @@ public class AdminProfile {
             }
         }
     }
-
+    public void initialize(){
+        if (AdminDashboard.adminId > 0) {
+            UserDb usDb = new UserDb();
+            this.setAdmin(usDb.getUser(AdminDashboard.adminId));
+            emailInput.setText(this.getAdmin().user_email);
+            passInput.setText(this.getAdmin().user_pass);
+        }else {
+            //cas when we have a admin id not exit like -1 or 0
+            onClickMenuNav(null);
+        }
+    }
 }
