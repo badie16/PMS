@@ -22,5 +22,6 @@ public class App extends Application {
         if (MyConnection.connection() != null) {
             new AdminLogin().showView(stage);
         }
+        System.out.println("ede");
     }
 }
