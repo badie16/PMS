@@ -21,7 +21,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         if (MyConnection.connection() != null) {
             new AdminLogin().showView(stage);
+            System.out.println("start");
         }
-        System.out.println("ede");
     }
 }
