@@ -13,6 +13,7 @@ public interface Directories {
     String adminLoginView = "view/AdminLogin.fxml";
     String adminDashboardView = "view/AdminDashboard.fxml";
     String adminProfileView = "view/AdminProfile.fxml";
+    String categoryManagementView = "view/CategoryManagement.fxml";
 
     static URL urlOfRsr(String str){
         return App.class.getResource(str);

@@ -2,6 +2,7 @@ package com.badie.pms;
 
 import com.badie.pms.controller.AdminDashboard;
 import com.badie.pms.controller.AdminLogin;
+import com.badie.pms.controller.CategoryManagement;
 import com.badie.pms.db.MyConnection;
 import com.badie.pms.util.Directories;
 import javafx.application.Application;
