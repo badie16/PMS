@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainAppContainer" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="925.0" styleClass="bgV1" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.badie.pms.controller.AdminDashboard">
+   <top> 
+      <AnchorPane prefHeight="60.0" prefWidth="779.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="0.0" text="Parking System" textFill="WHITE" textOverrun="WORD_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon accessibleRole="BUTTON" fill="#ffffff8c" fontSmoothingType="LCD" glyphName="BARS" layoutX="205.0" layoutY="37.0" onMouseClicked="#onToggleMenu" selectionFill="#ffffff8c" size="18" tabSize="20" AnchorPane.leftAnchor="220.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIcon>
+            <Pane layoutX="678.0" layoutY="13.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="108.0" style="-fx-text-fill: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="1.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="58.0" prefWidth="47.0" text="Admin " textFill="#ffffff8c" textOverrun="CLIP">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#ffffff8c" glyphName="USER" layoutX="14.0" layoutY="38.0" selectionStart="1" size="18" text="" textAlignment="CENTER" wrappingWidth="20.0" />
+                  <FontAwesomeIcon fill="#ffffff8d" glyphName="ANGLE_DOWN" layoutX="84.0" layoutY="37.0" size="18" textAlignment="CENTER" wrappingWidth="20.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="dashboardView" prefHeight="464.0" prefWidth="600.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" text="Dashboard" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Corbel Bold" size="30.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="27.0" layoutY="100.0" minHeight="-Infinity" minWidth="200.0" prefHeight="75.0" prefWidth="200.0" styleClass="card-header" stylesheets="@../style/main.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Parking Management System Analytics" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <MenuButton layoutX="425.0" layoutY="22.0" mnemonicParsing="false" styleClass="radio-box" text="October 27, 2024 - October 27, 2024 " AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Today" />
+                      <MenuItem mnemonicParsing="false" text="Yesterday" />
+                        <MenuItem mnemonicParsing="false" text="Last 30 Days" />
+                        <MenuItem mnemonicParsing="false" text="Last Month" />
+                    </items>
+                  </MenuButton>
+               </children></AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="190.0" minHeight="-Infinity" prefHeight="75.0" prefWidth="200.0" styleClass="card-body" stylesheets="@../style/main.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="175.0">
+               <children>
+                  <GridPane hgap="15.0" layoutX="32.0" layoutY="30.4" prefHeight="254.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="173.59998931884766" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane styleClass="card-header" stylesheets="@../style/main.css">
+                           <children>
+                              <Label layoutX="14.0" layoutY="12.0" maxWidth="1.7976931348623157E308" text="Daily Revenue" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="151.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" nodeOrientation="LEFT_TO_RIGHT" text="Total Revenue : $55" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="badge" />
+                                    <String fx:value="bg-success" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane styleClass="card-body" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER" layoutX="85.80000305175781" layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="No data available" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="60.0" styleClass="card-body" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" layoutX="1.0" text="No data available" AnchorPane.bottomAnchor="0.8000000000000114" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.6000000000000227" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" styleClass="card-header" stylesheets="@../style/main.css" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="14.0" layoutY="12.0" maxWidth="1.7976931348623157E308" text="Daily Parked Vehicle" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="151.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" nodeOrientation="LEFT_TO_RIGHT" text="Total Vehicle  : 2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="badge" />
+                                    <String fx:value="bg-primary" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="15.0" />
+         </padding></AnchorPane>
+   </center>
+   <left>
+      <AnchorPane fx:id="menu" cache="true" cacheHint="QUALITY" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="220.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="419.0" prefWidth="211.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btnCategoryPage" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Vehical Category" textFill="#ffffff7f" viewOrder="1.0" />
+                  <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Duration" />
+                  <Button layoutX="10.0" layoutY="47.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Prices" />
+                  <Button layoutX="10.0" layoutY="84.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Slot" />
+                  <Button layoutX="10.0" layoutY="120.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Customer" />
+                  <Button layoutX="10.0" layoutY="180.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Report" />
+                  <Button layoutX="10.0" layoutY="180.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Users" />
+                  <Button fx:id="btnProfilePage" layoutX="10.0" layoutY="222.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Profile" />
+               </children>
+            </VBox>
+            <Pane prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #343a40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Logged in as" textFill="#ffffff8d">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="115.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="98.0" text="Admin" textFill="#ffffff8d" textOverrun="CLIP">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+</BorderPane>
