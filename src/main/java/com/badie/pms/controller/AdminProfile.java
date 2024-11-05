@@ -37,13 +37,13 @@ public class AdminProfile {
             Directories.alert("Please fill all blank fields",
                     Alert.AlertType.ERROR);
         }else {
-            boolean choix = Directories.alert("Update Student ?", Alert.AlertType.CONFIRMATION);
+            boolean choix = Directories.alert("Update Profile ?", Alert.AlertType.CONFIRMATION);
             if (choix) {
                 admin.user_email = emailInput.getText();
                 admin.user_pass = passInput.getText();
                 UserDb usDb = new UserDb();
                 usDb.updateUser(admin);
-                Directories.alert("Student has successfully update",
+                Directories.alert("Profile has successfully update",
                         Alert.AlertType.INFORMATION);
             }
         }

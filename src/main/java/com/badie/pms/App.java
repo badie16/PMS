@@ -16,6 +16,10 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         if (MyConnection.connection() != null) {
+            stage.setWidth(950);
+            stage.setHeight(590);
+            stage.setMinWidth(950);
+            stage.setMinHeight(590);
             new AdminLogin().showView(stage);
         }
     }

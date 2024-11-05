@@ -14,6 +14,7 @@ public interface Directories {
     String adminDashboardView = "view/AdminDashboard.fxml";
     String adminProfileView = "view/AdminProfile.fxml";
     String categoryManagementView = "view/CategoryManagement.fxml";
+    String parkingDurationManagementView = "view/ParkingDurationManagement.fxml";
 
     static URL urlOfRsr(String str){
         return App.class.getResource(str);

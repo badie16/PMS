@@ -11,4 +11,6 @@ module com.badie.pms {
     exports com.badie.pms.controller;
     opens com.badie.pms.model to javafx.fxml;
     exports com.badie.pms.model;
+    opens com.badie.pms.db to javafx.fxml;
+    exports com.badie.pms.db;
 }

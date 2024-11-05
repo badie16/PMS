@@ -25,7 +25,7 @@ public class AdminDashboard implements Initializable {
     public BorderPane mainAppContainer;
     public AnchorPane dashboardView;
     public static AnchorPane dashboardViewStatic;
-    public Button btnCategoryPage;
+    public Button btnCategoryPage,btnDurationPage;
     private User admin;
     public AdminDashboard(){
 
@@ -48,6 +48,10 @@ public class AdminDashboard implements Initializable {
             mainAppContainer.setCenter(root);
         } else if (event.getSource().equals(btnCategoryPage)) {
             FXMLLoader fx = new FXMLLoader(Directories.urlOfRsr(Directories.categoryManagementView));
+            Parent root = fx.load();
+            mainAppContainer.setCenter(root);
+        } else if (event.getSource().equals(btnDurationPage)) {
+            FXMLLoader fx = new FXMLLoader(Directories.urlOfRsr(Directories.parkingDurationManagementView));
             Parent root = fx.load();
             mainAppContainer.setCenter(root);
         }

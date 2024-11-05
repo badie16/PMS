@@ -175,9 +175,8 @@
     -fx-alignment: CENTER;
 }
 .table-view .column-header-background{
-    -fx-background-radius:8px 8px 0px 0px;
-    -fx-background-inset: 0 0 0 0;
-     -fx-background-color:red;
+
+
 }
 .table-view .column-header, .filter{
     -fx-background-color:#fff;

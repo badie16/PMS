@@ -19,7 +19,7 @@
 
 <BorderPane fx:id="mainAppContainer" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="925.0" styleClass="bgV1" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.badie.pms.controller.AdminDashboard">
    <top> 
-      <AnchorPane prefHeight="60.0" prefWidth="779.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="60.0" prefWidth="780.0" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" graphicTextGap="0.0" text="Parking System" textFill="WHITE" textOverrun="WORD_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
@@ -165,10 +165,10 @@
             <VBox prefHeight="419.0" prefWidth="211.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button fx:id="btnCategoryPage" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Vehical Category" textFill="#ffffff7f" viewOrder="1.0" />
-                  <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Duration" />
-                  <Button layoutX="10.0" layoutY="47.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Prices" />
-                  <Button layoutX="10.0" layoutY="84.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Slot" />
-                  <Button layoutX="10.0" layoutY="120.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Customer" />
+                  <Button fx:id="btnDurationPage" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Duration" />
+                  <Button layoutX="10.0" layoutY="47.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Prices" />
+                  <Button layoutX="10.0" layoutY="84.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Parking Slot" />
+                  <Button layoutX="10.0" layoutY="120.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Customer" />
                   <Button layoutX="10.0" layoutY="180.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Report" />
                   <Button layoutX="10.0" layoutY="180.0" maxWidth="1.7976931348623157E308" styleClass="nav-btn" stylesheets="@../style/main.css" text="Users" />
                   <Button fx:id="btnProfilePage" layoutX="10.0" layoutY="222.0" maxWidth="1.7976931348623157E308" onAction="#onClickMenuNav" styleClass="nav-btn" stylesheets="@../style/main.css" text="Profile" />
