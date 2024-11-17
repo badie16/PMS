@@ -52,7 +52,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </padding>
                <children>
-                  <TextField fx:id="searchField" layoutX="481.0" layoutY="28.0" maxHeight="-Infinity" onKeyTyped="#onSearchCategory" prefHeight="30.0" prefWidth="180.0" promptText="Search" styleClass="input-V2" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TextField fx:id="searchField" layoutX="481.0" layoutY="28.0" maxHeight="-Infinity" onKeyTyped="#onSearchDuration" prefHeight="30.0" prefWidth="180.0" promptText="Search" styleClass="input-V2" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <TableView fx:id="tableDuration" layoutX="32.0" layoutY="62.400000000000006" prefHeight="232.0" prefWidth="643.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <columns>
                         <TableColumn fx:id="durationId" prefWidth="89.59998321533203" text="ID" />
