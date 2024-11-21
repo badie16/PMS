@@ -112,6 +112,12 @@
     -fx-padding : 10px;
     -fx-font-size:14px;
 }
+.combo-box{
+    -fx-background-color:transparent;
+    -fx-border-color: #e8ecf1;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size:14px;
+}
 .input-V2.active{
     -fx-border-color: red;
 }

@@ -7,8 +7,8 @@ import java.util.*;
 
 public class AppTest {
     public static void main(String[] args) {
-        PrgDurationDb p = new PrgDurationDb();
-        System.out.println(p.exitParkingDurationValue(1));
+       Object o = new Object();
+
 
     }
 }
