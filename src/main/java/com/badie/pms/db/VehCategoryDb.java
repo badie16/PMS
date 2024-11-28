@@ -59,4 +59,33 @@ public class VehCategoryDb {
         }
         return false;
     }
+
+    public int getCategoryIdByName(String categoryName) {
+        String sql = "SELECT category_id FROM parking_category WHERE category_name = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, categoryName);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("category_id");
+            }
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la récupération de l'ID de la catégorie : " + e.getMessage());
+        }
+        return -1; // Retourner -1 si non trouvé
+    }
+    public String getCategoryNameById(int category_id) {
+        String sql = "SELECT category_name FROM parking_category WHERE category_id = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, category_id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getString("category_name");
+            }
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la récupération de le nom de la catégorie : " + e.getMessage());
+        }
+        return null; // Retourner null si non trouvé
+    }
 }

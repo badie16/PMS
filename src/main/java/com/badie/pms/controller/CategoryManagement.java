@@ -32,7 +32,6 @@ public class CategoryManagement extends GlobalFunction implements Initializable 
     public AnchorPane addVehicleCategoryContainer,manageVehicleCategoryContainer;
     public TextField addCategoryField;
 
-    @Override
     public void onClickMenuNav(MouseEvent mouseEvent)  {
         if (mouseEvent.getSource() == toDashboardPageBtn1 || mouseEvent.getSource() == toDashboardPageBtn2){
             ((BorderPane)(mainContainer.getParent())).setCenter(AdminDashboard.dashboardViewStatic);
@@ -94,5 +93,15 @@ public class CategoryManagement extends GlobalFunction implements Initializable 
 
     public void onShowAddCategoryPage(ActionEvent actionEvent) {
         addVehicleCategoryContainer.setVisible(true);
+    }
+
+    @Override
+    public void onClickActionDelete(Object item) {
+
+    }
+
+    @Override
+    public void onClickActionUpdate(Object item) {
+
     }
 }

@@ -62,6 +62,28 @@
 .add-btn:hover{
     -fx-background-color:#2268ae;
 }
+.update-btn{
+    -fx-background-color:#0d6efd;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"calibri";
+    -fx-background-radius:4;
+}
+.update-btn:hover{
+    -fx-background-color:#0b5ed7;
+}
+.delete-btn{
+    -fx-background-color:#bb2d3b;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"calibri";
+    -fx-background-radius:4;
+}
+.delete-btn:hover{
+    -fx-background-color:#b02a37;
+}
 .input-V2{
     -fx-background-color:transparent;
     -fx-border-color : #ccc;
@@ -70,6 +92,10 @@
     -fx-padding : 5px 10px;
     -fx-border-radius:4px;
     -fx-font-size:14px;
+}
+
+.table-row-cell {
+    -fx-cell-size: 40px;
 }
 /*
 
@@ -218,16 +244,7 @@
     -fx-font-family:"Arial";
     -fx-cursor:hand;
 }
-.delete-btn{
-    -fx-background-color:#ff4d6b;
-    -fx-cursor:hand;
-    -fx-text-fill:#fff;
-    -fx-font-size:16px;
-    -fx-font-family:"Arial";
-}
-.delete-btn:hover{
-    -fx-background-color:#c51f32;
-}
+
 .label-info{
     -fx-background-color:#fff;
     -fx-background-radius:4px;
@@ -245,17 +262,7 @@
     -fx-background-color: #fff;
     -fx-background-radius:15px;
 }
-.update-btn{
-     -fx-background-color: #3c21f7;
-     -fx-font-size: 14;
-     -fx-font-weight: bold;
-     -fx-font-family:"Arial";
-     -fx-cursor:hand;
-     -fx-text-fill:#fff;
-}
-.update-btn:hover{
-    -fx-background-color:#22ad72;
-}
+
 
 .clear-btn{
     -fx-background-color:#6e2275;

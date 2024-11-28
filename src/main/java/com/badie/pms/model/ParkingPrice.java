@@ -77,7 +77,6 @@ public class ParkingPrice {
     public void setDuration_id(int duration_id) {
         this.duration_id = duration_id;
     }
-
     @Override
     public String toString() {
         return "ParkingPrice{" +
@@ -89,4 +88,6 @@ public class ParkingPrice {
                 ", price_updated_on=" + price_updated_on +
                 '}';
     }
+
+
 }
